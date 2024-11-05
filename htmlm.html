@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+
+<body>
+
+    <!-- Mouse -->
+    <!-- <div class="hidden">
+        <h2>Mouse Events Demo</h2>
+
+        <div id="eventArea">Hover or Click Here</div>
+
+        <div id="output"></div>
+    </div> -->
+
+
+    <div class="hidden">
+        <h2>Form Events Demo</h2>
+
+        <form id="myForm">
+            <input type="text" id="nameInput" placeholder="Enter your name" />
+            <textarea id="message" placeholder="Type a message"></textarea>
+            <select id="dropdown">
+                <option value="">Select an option</option>
+                <option value="Option1">Option 1</option>
+                <option value="Option2">Option 2</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        
+            <div id="output"></div>
+        
+        </form>
+
+    </div>
+
+    <div class="hidden">
+        <ul id="itemList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <!-- More items can be dynamically added here -->
+        </ul>
+    </div>
+
+<div class="">
+    <div id="eventArea">
+        <button id="btn"></button>
+   </div>
+</div>
+    
+    <script>
+
+const eventArea = document.getElementById("eventArea");
+const btn = document.getElementById("btn");
+
+
+eventArea.addEventListener("click", function () {
+    eventArea.style.background = "red";
+        });
+            
+        btn.addEventListener("click", function (event) {
+            // event.stopPropagation(); 
+            output.innerText = "Form submitted!";
+        });
+
+
+        const form = document.getElementById("myForm");
+        const nameInput = document.getElementById("nameInput");
+        const message = document.getElementById("message");
+        const dropdown = document.getElementById("dropdown");
+        const output = document.getElementById("output");
+
+
+        // submit event
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevents actual form submission for demo purposes
+            output.innerText = "Form submitted!";
+        });
+
+        // focus event
+        nameInput.addEventListener("focus", function () {
+            output.innerText = "Input field focused!";
+        });
+
+        // blur event
+        nameInput.addEventListener("blur", function () {
+            output.innerText = "Input field lost focus!";
+        });
+
+        // change event
+        dropdown.addEventListener("change", function () {
+            output.innerText = `Dropdown changed to: ${dropdown.value}`;
+        });
+
+        // input event
+        message.addEventListener("input", function () {
+            output.innerText = `Message input: ${message.value}`;
+        });
+
+        // reset event
+        form.addEventListener("reset", function () {
+            output.innerText = "Form has been reset!";
+        });
+
+    </script>
+
+</body>
+
+</html>

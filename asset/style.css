@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+#eventArea {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#eventArea:hover {
+    background-color: #f0f0f0;
+    /* Change background on hover */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Style the form container */
+#myForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style each form element */
+#myForm input,
+#myForm textarea,
+#myForm select,
+#myForm button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect */
+#myForm input:focus,
+#myForm textarea:focus,
+#myForm select:focus {
+    border-color: #007bff;
+}
+
+/* Style buttons */
+#myForm button {
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+#myForm button[type="submit"] {
+    background-color: #007bff;
+}
+
+#myForm button[type="reset"] {
+    background-color: #6c757d;
+}
+
+#myForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#myForm button[type="reset"]:hover {
+    background-color: #5a6268;
+}

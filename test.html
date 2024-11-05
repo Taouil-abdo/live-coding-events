@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+
+    <!-- <div class="hidden">
+        <h2>Mouse Events Demo</h2>
+
+        <div id="eventArea">Hover or Click Here</div>
+
+        <div id="output"></div>
+    </div> -->
+
+
+
+    
+
+    <!-- <div class="">
+        <h2>Form Events Demo</h2>
+
+        <form id="myForm">
+            <input type="text" id="nameInput" placeholder="Enter your name" />
+            <div id="output"> hh </div>
+            <textarea id="message" placeholder="Type a message"></textarea>
+            <select id="dropdown">
+                <option value="">Select an option</option>
+                <option value="Option1">Option 1</option>
+                <option value="Option2">Option 2</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        
+            
+        
+        </form>
+ </div> -->
+
+ <div class="">
+    <div id="eventArea">
+        <button id="btn"></button>
+        <span id="displayTask"></span>
+   </div>
+</div>
+    <script>
+
+
+         const tsak = {
+            id : 1,
+            title : "titre",
+            displayTask(){ console.log(`this id ${this.id} ,this is the title ${this.title}`)}
+         }
+        
+        //   tsak.displayTask;
+         let btn = document.getElementById("btn");
+        //  let displayTask = document
+        btn.addEventListener("click",tsak.displayTask.bind(tsak));
+        
+
+         
+
+         
+         
+
+
+
+
+
+
+// const eventArea = document.getElementById("eventArea");
+// const btn = document.getElementById("btn");
+
+
+// eventArea.addEventListener("click", function () {
+//     eventArea.style.background = "red";
+//         });
+            
+//         btn.addEventListener("click", function (event) {
+//             event.stopPropagation(); 
+//             output.innerText = "Form submitted!";
+//         });
+
+
+        
+
+
+
+
+//         //   let myForm =
+//           let myForm = document.getElementById("myForm");
+//           let nameoutput =document.getElementById("output");
+//           let nameInput =document.getElementById("nameInput");
+
+
+//         myForm.addEventListener("submit",function(e){
+
+//             e.preventDefault();
+//             alert("submited");
+
+
+//         });
+
+//         nameInput.addEventListener("focus", function () {
+//            let text = nameoutput.innerHTML = "Input field focused!";
+
+//             console.log(text);
+//         });
+
+//         message.addEventListener("input", function () {
+//             output.innerText = `Message input: ${message.value}`;
+//         });
+           
+
+
+
+
+
+
+
+
+
+
+
+
+        // let eventArea = document.getElementById("eventArea");
+
+
+        // eventArea.addEventListener("mouseover",clicke);
+
+        // eventArea.addEventListener("mouseout",click);
+
+
+        // function clicke()
+        // {
+        //     eventArea.style.background ="red";
+        // }
+
+        // function click()
+        // {
+        //     eventArea.style.background ="";
+        // }
+     
+
+    </script>
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
